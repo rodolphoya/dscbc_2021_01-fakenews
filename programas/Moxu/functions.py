@@ -1,4 +1,4 @@
-py -m pip install "lime"
+pip install https://raw.githubusercontent.com/marcotcr/lime/master/lime/lime_text.py
 from lime import lime_text
 # Manipulação de números
 import numpy as np
