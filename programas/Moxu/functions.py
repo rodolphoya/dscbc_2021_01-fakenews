@@ -1,5 +1,4 @@
-pip install https://raw.githubusercontent.com/marcotcr/lime/master/lime/lime_text.py
-from lime import lime_text
+
 # Manipulação de números
 import numpy as np
 #from os import path
@@ -98,7 +97,7 @@ class ProjectFunctions:
         for (coef_1, fn_1), (coef_2, fn_2) in top:
             print("\t%.4f\t%-15s\t\t%.4f\t%-15s" % (coef_1, fn_1, coef_2, fn_2))
 
-    def predict_explainer_for_training(index, model_pipeline, X_test, y_test, y_train, predict, predict_probability):
+    '''def predict_explainer_for_training(index, model_pipeline, X_test, y_test, y_train, predict, predict_probability):
         # Mostra como foi a tomada de decisão para cada notícia classificada pelo
         # modelo. A função recebe o index de uma notícia, o pipeline do modelo,
         # as predições e as probabilidades das predições.
@@ -140,7 +139,7 @@ class ProjectFunctions:
                     np.unique(y))
         explained = explainer.explain_instance(txt_instance, 
                     model_pipeline.predict_proba, num_features=15)
-        explained.show_in_notebook(text=txt_instance, predict_proba=False)
+        explained.show_in_notebook(text=txt_instance, predict_proba=False)'''
 
     def procurando_metricas(modelo, X_train, y_train, X_test, y_test):
         # Vetorizando os datasets
