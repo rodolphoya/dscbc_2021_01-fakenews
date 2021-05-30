@@ -1,3 +1,4 @@
+pip install lime
 from lime import lime_text
 # Manipulação de números
 import numpy as np
