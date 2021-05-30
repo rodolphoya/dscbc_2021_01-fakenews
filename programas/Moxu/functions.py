@@ -75,7 +75,7 @@ class ProjectFunctions:
 
         visualizer.poof()
 
-    def model_visual(model, classes, train_df, test_df):
+    def model_visual(model, classes, y_train, y_test, train_df, test_df):
         # Constrói o visualizador
         visualizer = ClassPredictionError(model, 
                                         classes=classes)
@@ -83,7 +83,7 @@ class ProjectFunctions:
         plt.figure(figsize=(15, 5))
 
         # fita os dados no visualizador e os scores
-        visualizer.fit(train_df, y_for_training)
+        visualizer.fit(train_df, y_train)
         visualizer.score(test_df, y_test)
         visualizer.poof()
 
