@@ -15,6 +15,7 @@ import seaborn as sns
 from wordcloud import WordCloud, ImageColorGenerator
 from yellowbrick.classifier import ClassPredictionError
 from yellowbrick.text import FreqDistVisualizer, TSNEVisualizer
+from yellowbrick.model_selection import LearningCurve
 
 # Machine Learning, vetorização e métricas
 import nltk
@@ -96,6 +97,16 @@ class ProjectFunctions:
         top = zip(coefs_with_fns[:n], coefs_with_fns[:-(n + 1):-1])
         for (coef_1, fn_1), (coef_2, fn_2) in top:
             print("\t%.4f\t%-15s\t\t%.4f\t%-15s" % (coef_1, fn_1, coef_2, fn_2))
+            
+    def learning_curve(model, X, y):
+        visualizer_tf = LearningCurve(model, cv=KFold(n_splits=10, 
+                                                    shuffle=True,
+                                                    random_state=123), 
+                                scoring='f1_weighted', 
+                                train_sizes=np.linspace(0.3, 1.0, 10), 
+                                n_jobs=-1)
+        visualizer_tf.fit(X, y)
+        visualizer_tf.poof() 
 
     '''def predict_explainer_for_training(index, model_pipeline, X_test, y_test, y_train, predict, predict_probability):
         # Mostra como foi a tomada de decisão para cada notícia classificada pelo
