@@ -55,7 +55,7 @@ class ProjectFunctions:
         wordcloud = WordCloud(max_font_size = 50, 
                             max_words = max, 
                             stopwords = stop_w,
-                            background_color='black',
+                            background_color='white',
                             mask=mask).generate(text)
 
         plt.figure(figsize=(30, 10))
