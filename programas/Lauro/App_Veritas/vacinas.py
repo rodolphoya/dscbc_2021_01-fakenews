@@ -1,6 +1,7 @@
 import streamlit as st
 
 import nltk.tokenize
+nltk.download('punkt')
 import pandas as pd
 from nltk.probability import FreqDist
 from nltk.tokenize import sent_tokenize
