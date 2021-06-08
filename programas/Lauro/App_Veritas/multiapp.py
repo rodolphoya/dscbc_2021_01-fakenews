@@ -65,12 +65,19 @@ class MultiApp:
 
         st.sidebar.markdown("---")
 
-        if st.sidebar.button("contatos", key="5"):
+        if st.sidebar.button("Fale com a gente!", key="5"):
             st.sidebar.markdown('''
                 Grupo Tera
                 
-                Felipe - Lauro - Mel 
-                
-                Moxu - Rodolpho
+               moxú - dairenkonmajime@gmail.com
+
+               felipe - fmonteirogabriel@gmail.com
+
+               lauro - lauro.namiki@gmail.com
+
+               mel - meliza.caug@gmail.com
+
+               rodolpho - rodolphoya@gmail.com
+
                 ''')
             pass
