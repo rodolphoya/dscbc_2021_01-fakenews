@@ -21,7 +21,7 @@ def veritas():
         <style>
         .reportview-container {
         background: url(
-        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fapi.time.com%2Fwp-content%2Fuploads%2F2020%2F11%2FGettyImages-1215419166.jpg&f=1&nofb=1"
+        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.6TFxBe_i8l2lM3hKTzC6kQHaHa%26pid%3DApi&f=1"
         ); 
         height: 500pk; 
         background-positon: center; 
