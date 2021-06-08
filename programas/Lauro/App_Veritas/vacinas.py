@@ -1,4 +1,3 @@
-!wget https://raw.githubusercontent.com/m-oxu/dscbc_2021_01-fakenews/main/programas/Lauro/App_Veritas/data/nejm_vacinas.csv
 import streamlit as st
 
 import nltk.tokenize
@@ -46,7 +45,7 @@ def veritas():
 
     # CARREGANDO O ARQUIVO 'nejm_vacinas.csv'
 
-    df = pd.read_csv('nejm_vacinas.csv', encoding='utf-8')
+    df = pd.read_csv('programas/Lauro/App_Veritas/data/nejm_vacinas.csv', encoding='utf-8')
 
     resposta_curta = []
 
