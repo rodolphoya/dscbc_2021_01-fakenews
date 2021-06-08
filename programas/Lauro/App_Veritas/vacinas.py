@@ -13,7 +13,7 @@ from heapq import nlargest
 from string import punctuation
 
 
-def veritas():
+'''def veritas():
     # DEFININDO A TELA DE FUNDO
 
     st.markdown(
@@ -31,7 +31,7 @@ def veritas():
         </style>
         """,
         unsafe_allow_html=True,
-    )
+    )'''
 
     st.header('Perguntas Frequentes sobre vacinas - Covid-19')
     st.markdown('---')
