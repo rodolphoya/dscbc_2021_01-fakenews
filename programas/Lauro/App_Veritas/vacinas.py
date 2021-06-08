@@ -13,7 +13,7 @@ from heapq import nlargest
 from string import punctuation
 
 
-'''def veritas():
+def veritas():
     # DEFININDO A TELA DE FUNDO
 
     st.markdown(
@@ -21,7 +21,7 @@ from string import punctuation
         <style>
         .reportview-container {
         background: url(
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuY42b1FDfMoBeYrGdwfiyoATeST2SXTUgMQ&usqp=CAU"
+        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.BmtTh4zz5HbqOdbG9meRsAHaHk%26pid%3DApi&f=1"
         ); 
         height: 500pk; 
         background-positon: center; 
@@ -31,7 +31,7 @@ from string import punctuation
         </style>
         """,
         unsafe_allow_html=True,
-    )'''
+    )
 
     st.header('Perguntas Frequentes sobre vacinas - Covid-19')
     st.markdown('---')
