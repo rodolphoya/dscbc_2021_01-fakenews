@@ -2,6 +2,7 @@ import streamlit as st
 
 import nltk.tokenize
 nltk.download('punkt')
+nltk.download('stopwords')
 import pandas as pd
 from nltk.probability import FreqDist
 from nltk.tokenize import sent_tokenize
