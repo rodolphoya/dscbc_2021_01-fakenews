@@ -5,6 +5,7 @@ nltk.download('punkt')
 import pandas as pd
 from nltk.probability import FreqDist
 from nltk.tokenize import sent_tokenize
+from nltk.corpus import stopwords
 
 from collections import defaultdict
 from heapq import nlargest
@@ -65,11 +66,11 @@ def veritas():
         palavras = nltk.tokenize.word_tokenize(texto.lower())
         from nltk.corpus import stopwords
 
-        stopwords = set(
+        stopword = set(
             stopwords.words('portuguese') + list(punctuation)
         )
         palavras_sem_stopwords = [
-            palavra for palavra in palavras if palavra not in stopwords
+            palavra for palavra in palavras if palavra not in stopword
         ]
         frequencia = FreqDist(palavras_sem_stopwords)
         sentencas_importantes = defaultdict(int)
