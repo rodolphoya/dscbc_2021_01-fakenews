@@ -23,7 +23,7 @@ def veritas():
             
             if pred_proba > 85 and pred == 'verdadeira':
                 return st.success(f'A notícia parece ser {predicao}, com {pred_proba}% de probabilidade.')
-            elif if pred_proba > 85 and pred == 'falsa':
+            elif pred_proba > 85 and pred == 'falsa':
                 return st.error(f'A notícia parece ser {predicao}, com {pred_proba}% de probabilidade.')
             
             elif pred_proba > 70 and pred_proba < 85:
