@@ -10,7 +10,7 @@ def veritas():
     st.markdown("---")
     st.markdown('''Tenha certeza que sua notícia possua mais de 70 caracteres e que trate somente de assuntos relacionados ao COVID-19, tais como medicamentos, 
              tratamentos e prevenções!
-             '''
+     ''')
     st.markdown("---")
     st.subheader('Cole o texto aqui:')
     noticia = st.text_area('')
