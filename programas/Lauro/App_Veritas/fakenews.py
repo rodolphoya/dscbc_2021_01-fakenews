@@ -8,5 +8,5 @@ def veritas():
     st.subheader('Cole o texto aqui:')
     noticia = st.text_area('')
     #if st.button("Analisar!"):
-     pred = Predict.predict(noticia)
-     return st.success(pred)
+    pred = Predict.predict(noticia)
+    return st.success(pred)
