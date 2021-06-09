@@ -53,7 +53,7 @@ class MultiApp:
         }} </style> """, unsafe_allow_html=True)
 
         st.sidebar.title("🚀 Veritas")
-        st.sidebar.title("Selecione a opção:")
+        st.sidebar.title("Menu")
         st.sidebar.markdown("---")
 
         app = st.sidebar.radio(
