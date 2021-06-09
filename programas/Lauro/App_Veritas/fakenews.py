@@ -8,7 +8,7 @@ def veritas():
     st.markdown("---")
     #st.subheader('Cole o texto aqui:')
     txt = st.text_area("Insira o texto aqui")
-    st.button("Analisar!"):
+    st.button("Analisar!")
         #print('')
     st.markdown("---")
     return predict.predict(txt)
