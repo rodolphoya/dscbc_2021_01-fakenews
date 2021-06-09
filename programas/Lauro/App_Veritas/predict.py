@@ -10,13 +10,15 @@ from functions import ProjectFunctions
 import sklearn
 import streamlit as st
 
+model = load(open('/app/dscbc_2021_01-fakenews/programas/Lauro/App_Veritas/model.joblib', 'rb'))
 class Predict:
+    
     def predict(txt):
-        model = load(open('/app/dscbc_2021_01-fakenews/programas/Lauro/App_Veritas/model.joblib', 'rb'))
+    if model.predict(texto) == 'VERDADEIRO':
+        return('verdadeira')
+    else:
+        return('falsa')
+                
+    def predict_proba(txt):
         texto = (pd.Series(txt)).apply(ProjectFunctions.remover_acentos_e_numeros)
-        predicao = ''
-            if model.predict(texto) == 'VERDADEIRO':
-                predicao = 'verdadeira'
-            else:
-                predicao = 'falsa'
-                return ((round(np.max(model.predict_proba(texto)), 2))*100})
+        return ((round(np.max(model.predict_proba(texto)), 2))*100})
