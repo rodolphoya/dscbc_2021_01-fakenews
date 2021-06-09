@@ -20,7 +20,7 @@ st.markdown(f""" <style>
 
 veritas = MultiApp()
 
-veritas.add_app("Fake News", fakenews)
+veritas.add_app("Fake News", fakenews.veritas)
 veritas.add_app("Perguntas Frequentes", vacinas.veritas)
 veritas.add_app("Guia Prático", cartilha.veritas)
 veritas.add_app("Quem somos nós", apresentacao.veritas)
