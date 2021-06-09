@@ -9,6 +9,6 @@ def veritas():
     noticia = st.text_input('')
     if st.button("Analisar!"):
         pred = Predict.predict(noticia)
-        return st.write(pred)
+        st.success(pred)
     #st.markdown("---")
     #return
