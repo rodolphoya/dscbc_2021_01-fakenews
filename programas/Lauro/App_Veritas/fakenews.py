@@ -19,12 +19,12 @@ def veritas():
             return st.error('Essa notícia é muito curta! Nosso algoritmo funciona melhor com notícias com 70 caracteres ou mais...')
         else:
             predicao = Predict.predict(noticia)
-            pred_proba = Predict.predict_proba(noticia)
+            pred_proba = (round(Predict.predict_proba(noticia)), 2)
             
             if pred_proba > 85:
                 return st.success(f'A notícia parece ser {predicao}, com {pred_proba}% de probabilidade.')
             elif pred_proba > 70 and pred_proba < 85:
-                return st.info(f'''A notícia parece ser {predicao}, com {round(pred_proba, 2)}% de probabilidade. 
+                return st.info(f'''A notícia parece ser {predicao}, com {pred_proba}% de probabilidade. 
                                       Não se esqueça de checar com agências certificadas para ter certeza!''')
             else:
                   return st.warning(f'''A notícia parece ser {predicao}, com {pred_proba}% de probabilidade. 
