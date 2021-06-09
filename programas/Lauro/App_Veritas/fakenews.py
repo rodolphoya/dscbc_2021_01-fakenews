@@ -21,9 +21,9 @@ def veritas():
             predicao = Predict.predict(noticia)
             pred_proba = round(Predict.predict_proba(noticia), 2)
             
-            if pred_proba > 85 and pred == 'verdadeira':
+            if pred_proba > 85 and predicao == 'verdadeira':
                 return st.success(f'A notícia parece ser {predicao}, com {pred_proba}% de probabilidade.')
-            elif pred_proba > 85 and pred == 'falsa':
+            elif pred_proba > 85 and predicao == 'falsa':
                 return st.error(f'A notícia parece ser {predicao}, com {pred_proba}% de probabilidade.')
             
             elif pred_proba > 70 and pred_proba < 85:
