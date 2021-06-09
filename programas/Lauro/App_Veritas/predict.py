@@ -12,7 +12,7 @@ import pandas as pd
 import numpy as np
 from functions import ProjectFunctions
 
-model = load('pos_modlel.joblib')
+model = load('"/app/dscbc_2021_01-fakenews/programas/Lauro/App_Veritas/model.joblib')
 
 def predict(txt):
     if len(txt) < 70:
