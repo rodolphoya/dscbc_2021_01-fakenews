@@ -11,4 +11,4 @@ def veritas():
     if st.button("Analisar!"):
         print('analise carregando o texto')
     st.markdown("---")
-    return predict(txt)
+    return predict.predict(txt)
