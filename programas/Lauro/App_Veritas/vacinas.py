@@ -1,9 +1,12 @@
 import streamlit as st
 
 import nltk.tokenize
+nltk.download('punkt')
+nltk.download('stopwords')
 import pandas as pd
 from nltk.probability import FreqDist
 from nltk.tokenize import sent_tokenize
+from nltk.corpus import stopwords
 
 from collections import defaultdict
 from heapq import nlargest
@@ -18,7 +21,7 @@ def veritas():
         <style>
         .reportview-container {
         background: url(
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuY42b1FDfMoBeYrGdwfiyoATeST2SXTUgMQ&usqp=CAU"
+        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.6TFxBe_i8l2lM3hKTzC6kQHaHa%26pid%3DApi&f=1"
         ); 
         height: 500pk; 
         background-positon: center; 
@@ -45,7 +48,7 @@ def veritas():
 
     # CARREGANDO O ARQUIVO 'nejm_vacinas.csv'
 
-    df = pd.read_csv('data/nejm_vacinas.csv', encoding='utf-8')
+    df = pd.read_csv('programas/Lauro/App_Veritas/data/nejm_vacinas.csv', encoding='utf-8')
 
     resposta_curta = []
 
@@ -64,11 +67,11 @@ def veritas():
         palavras = nltk.tokenize.word_tokenize(texto.lower())
         from nltk.corpus import stopwords
 
-        stopwords = set(
+        stopword = set(
             stopwords.words('portuguese') + list(punctuation)
         )
         palavras_sem_stopwords = [
-            palavra for palavra in palavras if palavra not in stopwords
+            palavra for palavra in palavras if palavra not in stopword
         ]
         frequencia = FreqDist(palavras_sem_stopwords)
         sentencas_importantes = defaultdict(int)
