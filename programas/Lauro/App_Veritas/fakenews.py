@@ -28,7 +28,7 @@ def veritas():
     st.markdown("---")
     #st.subheader('Cole o texto aqui:')
     noticia = st.text_input('')
-    if st.button("Analisar!"):
-        return st.write(predict(noticia))
+    st.button("Analisar!"):
+    return st.write(predict(noticia))
     #st.markdown("---")
     #return
