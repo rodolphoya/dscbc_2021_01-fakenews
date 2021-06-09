@@ -8,6 +8,10 @@ def veritas():
     #    use_column_width=False, clamp=False, width=1000
     st.header("**Detectando Fake News de COVID-19**")
     st.markdown("---")
+    st.text('''Tenha certeza que sua notícia possua mais de 70 caracteres e que trate somente de assuntos relacionados ao COVID-19, tais como medicamentos, 
+             tratamentos e prevenções!
+             '''
+    st.markdown("---")
     st.subheader('Cole o texto aqui:')
     noticia = st.text_area('')
     if st.button("Analisar!"):
