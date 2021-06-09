@@ -21,11 +21,14 @@ def veritas():
             predicao = Predict.predict(noticia)
             pred_proba = round(Predict.predict_proba(noticia), 2)
             
-            if pred_proba > 85:
+            if pred_proba > 85 and pred == 'verdadeira':
                 return st.success(f'A notícia parece ser {predicao}, com {pred_proba}% de probabilidade.')
+            elif if pred_proba > 85 and pred == 'falsa':
+                return st.error(f'A notícia parece ser {predicao}, com {pred_proba}% de probabilidade.')
+            
             elif pred_proba > 70 and pred_proba < 85:
                 return st.info(f'''A notícia parece ser {predicao}, com {pred_proba}% de probabilidade. 
-                                      Não se esqueça de checar com agências certificadas para ter certeza!''')
+                                     Não se esqueça de checar com agências certificadas para ter certeza!''')
             else:
                   return st.warning(f'''A notícia parece ser {predicao}, com {pred_proba}% de probabilidade. 
-                                      É melhor procurar uma agência credenciada para checar essa informação para você, ok?''')
+                                      Recomendamos procurar uma agência credenciada para checar essa informação para você, ok?''')
