@@ -6,9 +6,7 @@ def veritas():
     st.header("**Detectando Fake News de COVID-19**")
     st.markdown("---")
     st.subheader('Cole o texto aqui:')
-    noticia = st.text_input('')
+    noticia = st.text_area('')
     if st.button("Analisar!"):
         pred = Predict.predict(noticia)
-        st.success(pred)
-        #st.markdown("---")
-        #return
+    return st.success(pred)
