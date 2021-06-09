@@ -12,7 +12,8 @@ model = load(open('/app/dscbc_2021_01-fakenews/programas/Lauro/App_Veritas/model
 class Predict:
     
     def predict(txt):
-        if model.predict(txt) == 'VERDADEIRO':
+        texto = (pd.Series(txt)).apply(ProjectFunctions.remover_acentos_e_numeros)
+        if model.predict(texto) == 'VERDADEIRO':
             return('verdadeira')
         else:
             return('falsa')
