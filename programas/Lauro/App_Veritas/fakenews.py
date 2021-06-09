@@ -9,4 +9,4 @@ def veritas():
     noticia = st.text_area('')
     if st.button("Analisar!"):
         pred = Predict.predict(noticia)
-    return st.success(pred)
+        return st.success(pred)
