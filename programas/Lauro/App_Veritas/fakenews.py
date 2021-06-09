@@ -1,5 +1,5 @@
 import streamlit as st
-import predict
+from predict import Predict
 
 def veritas():
     st.image("/app/dscbc_2021_01-fakenews/programas/Lauro/App_Veritas/data/imagem.png", use_column_width=True, width=[int])
@@ -11,4 +11,4 @@ def veritas():
     st.button("Analisar!")
         #print('')
     st.markdown("---")
-    return predict.predict(txt)
+    return Predict.predict(txt)
