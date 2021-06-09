@@ -1,5 +1,8 @@
 import streamlit as st
 from predict import Predict
+import numpy as np
+
+
 def veritas():
     st.image("/app/dscbc_2021_01-fakenews/programas/Lauro/App_Veritas/data/imagem.png", use_column_width=True, width=[int])
     #    use_column_width=False, clamp=False, width=1000
