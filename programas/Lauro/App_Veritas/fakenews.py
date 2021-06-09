@@ -7,7 +7,7 @@ def veritas():
     st.header("**Detectando Fake News de COVID-19**")
     st.markdown("---")
     st.subheader('Cole o texto aqui:')
-    txt = st.text_area()
+    txt = st.text_area('🚀')
     st.button("Analisar!")
         #print('')
     st.markdown("---")
