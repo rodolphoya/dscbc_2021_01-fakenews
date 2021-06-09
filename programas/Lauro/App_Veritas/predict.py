@@ -19,4 +19,4 @@ class Predict:
                 
     def predict_proba(txt):
         texto = (pd.Series(txt)).apply(ProjectFunctions.remover_acentos_e_numeros)
-        return ((round(np.max(model.predict_proba(texto)), 2))*100})
+        return ((round(np.max(model.predict_proba(texto)), 2))*100)
