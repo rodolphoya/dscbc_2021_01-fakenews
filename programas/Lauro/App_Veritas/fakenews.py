@@ -27,5 +27,5 @@ def veritas():
                 return st.information(f'''A notícia parece ser {predicao}, com {pred_proba}% de probabilidade. 
                                       Não se esqueça de checar com agências certificadas para ter certeza!''')
             else:
-                  return st.warning(f'A notícia parece ser {predicao}, com {pred_proba}% de probabilidade.', 
-                                      'É melhor procurar uma agência credenciada para checar essa informação para você, ok?')
+                  return st.warning(f'''A notícia parece ser {predicao}, com {pred_proba}% de probabilidade. 
+                                      É melhor procurar uma agência credenciada para checar essa informação para você, ok?''')
