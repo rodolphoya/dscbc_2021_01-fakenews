@@ -11,10 +11,10 @@ from joblib import load
 import pandas as pd
 import numpy as np
 from functions import ProjectFunctions
-
-model = load('/app/dscbc_2021_01-fakenews/programas/Lauro/App_Veritas/model.joblib')
+import sklearn
 
 def predict(txt):
+    model = load('/app/dscbc_2021_01-fakenews/programas/Lauro/App_Veritas/model.joblib')
     if len(txt) < 70:
         print('Essa notícia é muito curta! Nosso algoritmo funciona melhor com notícias com 70 caracteres ou mais...')
     else:
